@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script text="text/javascript">
+      function redirect(){  
+        var url = window.location.href;
+        var parsedURL = new URL(url);
+        var postID = parsedURL.searchParams.get("id");
+        window.location.replace(`dealm:///post?id=${postID}`);
+      }
+    </script>
+    <h1>Redirecting</h1>
+    <button onclick="redirect()">redirect</button>
+  </body>
+</html>
